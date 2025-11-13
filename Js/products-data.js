@@ -8,6 +8,7 @@ let products = [
         price: 59.99,
         article: 23001,
         discount: 70.99,
+        deliveryTime: 5,
         rating: 4.5,
         image: [
             "../assets/images/products/1_1.png",
@@ -25,6 +26,7 @@ let products = [
         price: 89.99,
         article: 23002,
         discount: 110.99,
+        deliveryTime: 2,
         rating: 4.0,
         image: [
             "../assets/images/products/2_1.png",
@@ -41,6 +43,7 @@ let products = [
         description: "Portable mini speaker with deep bass and long battery life.",
         price: 34.99,
         article: 23003,
+        deliveryTime: 4,
         discount: 48.99,
         rating: 4.0,
         image: [
@@ -58,6 +61,7 @@ let products = [
         description: "Lightweight and comfortable shoes perfect for everyday running.",
         discount: 85.99,
         price: 74.99,
+        deliveryTime: 1,
         article: 24001,
         rating: 5.0,
         image: [
@@ -75,6 +79,7 @@ let products = [
         description: "Classic men's wallet made from genuine leather.",
         discount: 32.99,
         price: 24.99,
+        deliveryTime: 6,
         article: 25001,
         rating: 4.0,
         image: [
@@ -92,6 +97,7 @@ let products = [
         category: "Accessories",
         brand: "Ray-Ban",
         price: 19.99,
+        deliveryTime: 1,
         rating: 4.0,
         article: 25002,
         image: [
@@ -110,6 +116,7 @@ let products = [
         brand: "Samsonite",
         price: 45.99,
         article: 26001,
+        deliveryTime: 7,
         rating: 4.0,
         image: [
             "../assets/images/products/7_1.png",
@@ -126,6 +133,7 @@ let products = [
         description: "Automatic coffee machine for quick and fresh brewing.",
         discount: 79.99,
         price: 69.99,
+        deliveryTime: 1,
         article: 27001,
         rating: 3.5,
         image: [
@@ -143,6 +151,7 @@ let products = [
         description: "Soft cotton T-shirt available in multiple colors.",
         discount: 24.99,
         price: 14.99,
+        deliveryTime: 5,
         article: 24002,
         rating: 2.0,
         image: [
@@ -162,6 +171,7 @@ let products = [
         price: 39.99,
         article: 23004,
         rating: 4.5,
+        deliveryTime: 6,
         image: [
             "../assets/images/products/10_1.png",
             "../assets/images/products/10_2.png",
@@ -178,6 +188,7 @@ let products = [
         discount: 599.99,
         price: 499.99,
         article: 23005,
+        deliveryTime: 2,
         rating: 5.0,
         image: [
             "../assets/images/products/11_1.png",
@@ -195,6 +206,7 @@ let products = [
         discount: 40.99,
         price: 29.99,
         article: 28001,
+        deliveryTime: 1,
         rating: 4.5,
         image: [
             "../assets/images/products/12_1.png",
@@ -213,6 +225,7 @@ let products = [
         price: 54.99,
         article: 23006,
         rating: 2.0,
+        deliveryTime: 4,
         image: [
             "../assets/images/products/13_1.png",
             "../assets/images/products/13_2.png",
@@ -229,6 +242,7 @@ let products = [
         discount: 159.99,
         price: 129.99,
         article: 29001,
+        deliveryTime: 3,
         rating: 5.0,
         image: [
             "../assets/images/products/14_1.png",
@@ -246,6 +260,7 @@ let products = [
         article: 25003,
         discount: 22.10,
         price: 12.99,
+        deliveryTime: 4,
         rating: 4.0,
         image: [
             "../assets/images/products/15_1.png",
@@ -263,6 +278,7 @@ let products = [
         article: 27002,
         discount: 99.99,
         price: 79.99,
+        deliveryTime: 6,
         rating: 4.5,
         image: [
             "../assets/images/products/16_1.png",
@@ -280,6 +296,7 @@ let products = [
         article: 23007,
         discount: 89.99,
         price: 69.99,
+        deliveryTime: 3,
         rating: 5.0,
         image: [
             "../assets/images/products/17_1.png",
@@ -296,6 +313,7 @@ let products = [
         description: "Fast wireless charger compatible with all smartphones.",
         article: 23008,
         discount: 42.99,
+        deliveryTime: 1,
         price: 22.99,
         rating: 4.5,
         image: [
@@ -314,6 +332,7 @@ let products = [
         article: 24003,
         discount: 58.99,
         price: 34.99,
+        deliveryTime: 6,
         rating: 4.0,
         image: [
             "../assets/images/products/19_1.png",
@@ -330,6 +349,7 @@ let products = [
         description: "Stylish blue denim jeans with slim fit.",
         article: 24004,
         discount: 55.99,
+        deliveryTime: 2,
         price: 44.99,
         rating: 4.5,
         image: [
@@ -348,6 +368,7 @@ let products = [
         discount: 49.99,
         article: 23009,
         price: 29.99,
+        deliveryTime: 3,
         rating: 4.5,
         image: [
             "../assets/images/products/21_1.png",
@@ -365,6 +386,7 @@ let products = [
         article: 30001,
         discount: 24.99,
         price: 14.99,
+        deliveryTime: 1,
         rating: 4.0,
         image: [
             "../assets/images/products/22_1.png",
@@ -382,6 +404,7 @@ let products = [
         description: "Non-slip yoga mat for comfortable home workouts.",
         discount: 45.99,
         price: 24.99,
+        deliveryTime: 5,
         rating: 4.5,
         image: [
             "../assets/images/products/23_1.png",
@@ -399,6 +422,7 @@ let products = [
         discount: 59.99,
         article: 32001,
         price: 39.99,
+        deliveryTime: 1,
         rating: 4.5,
         image: [
             "../assets/images/products/24_1.png",
@@ -417,6 +441,7 @@ let products = [
         article: 23010,
         price: 349.99,
         rating: 5.0,
+        deliveryTime: 5,
         image: [
             "../assets/images/products/25_1.png",
             "../assets/images/products/25_2.png",
@@ -432,6 +457,7 @@ let products = [
         brand: "Casio",
         discount: 79.99,
         article: 24005,
+        deliveryTime: 7,
         price: 59.99,
         rating: 4.0,
         image: [
@@ -450,6 +476,7 @@ let products = [
         discount: 129.99,
         article: 26002,
         price: 89.99,
+        deliveryTime: 1,
         rating: 5.0,
         image: [
             "../assets/images/products/27_1.png",
@@ -468,6 +495,7 @@ let products = [
         discount: 79.99,
         price: 49.99,
         rating: 4.5,
+        deliveryTime: 6,
         image: [
             "../assets/images/products/28_1.png",
             "../assets/images/products/28_2.png",
@@ -485,6 +513,7 @@ let products = [
         article: 23011,
         price: 69.99,
         rating: 5.0,
+        deliveryTime: 4,
         image: [
             "../assets/images/products/29_1.png",
             "../assets/images/products/29_2.png",
@@ -501,29 +530,13 @@ let products = [
         discount: 399.99,
         article: 23012,
         price: 299.99,
+        deliveryTime: 3,
         rating: 4.5,
         image: [
             "../assets/images/products/30_1.png",
             "../assets/images/products/30_2.png",
             "../assets/images/products/30_3.png",
             "../assets/images/products/30_4.png",
-        ],
-    },
-    {
-        id: 6,
-        name: "Sunglasses",
-        description: "UV-protected sunglasses with stylish modern design.",
-        discount: 45.99,
-        category: "Accessories",
-        brand: "Ray-Ban",
-        price: 29.99,
-        rating: 4.0,
-        article: 25001,
-        image: [
-            "../assets/images/products/6_2.png",
-            "../assets/images/products/6_1.png",
-            "../assets/images/products/6_3.png",
-            "../assets/images/products/6_4.png",
         ],
     },
 ];

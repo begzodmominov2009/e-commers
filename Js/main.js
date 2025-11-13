@@ -6,8 +6,11 @@ let filteredProductsTwo = products.filter((el) => el.category === "Fashion")
 let sliceFashionProducts = filteredProductsTwo.slice(0, 4)
 let filteredProducts = products.filter((el) => el.category === "Electronics")
 let sliceProducts = filteredProducts.slice(0, 4);
+let carts = JSON.parse(localStorage.getItem("carts") || "[]")
+localStorage.setItem("carts", JSON.stringify(carts))
 
 function showProducts(content, data) {
+    content.innerHTML = ""
     data.map((el) => {
         content.innerHTML += `
                          <div
@@ -124,7 +127,26 @@ function showProducts(content, data) {
                                         class="text-[#7A7680] whitespace-nowrap text-[10px] sm:text-[14px] xl:text-[16px]">${el.discount}
                                         ₽</strike>
                                 </div>
-                                <a href=""
+                               
+                            ${carts.find((cart) => cart.id === el.id) ?
+                `<div class="flex items-center gap-[5px] w-[100px]">
+                                <button
+                                onClick="decraese(${el.id})"
+                                    class="border-[2px] w-full group cursor-pointer group border-[#5946D7] p-[5px]  rounded-[10px] bg-[#5946D7] hover:border-[#5946D7] duration-200 inline-flex items-center justify-center">
+                                    <svg class="fill-white h-[20px] sm:h-[20px] w-[20px] sm:w-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#5946D7"><path d="M240-440v-80h480v80H240Z"/></svg>
+                                </button>
+                                 <span
+                                    class="font-bold">
+                                 ${carts.find((cart) => cart.id === el.id).number}
+                                </span>
+                                 <button
+                                 onClick="increase(${el.id})"
+                                    class="border-[2px] group w-full cursor-pointer group border-[#5946D7] p-[5px]  rounded-[10px] bg-[#5946D7] hover:border-[#5946D7] duration-200 inline-flex items-center justify-center">
+                                    <svg class="fill-white h-[20px] sm:h-[20px] w-[20px] sm:w-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#5946D7"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg></button>
+
+                                </div>
+                            </div>` : `<button
+                                  onClick="addToCart(${el.id})"
                                     class="border-[2px] cursor-pointer group border-[#5946D7] p-[5px] rounded-[8px] bg-transparent hover:bg-[#5946D7] hover:border-[#5946D7] duration-200 inline-flex items-center justify-center">
                                     <svg class="w-[16px] sm:w-[20px] xl:w-[24px] h-[16px] sm:h-[20px] xl:h-[24px] fill-[#5946D7] group-hover:fill-white duration-200"
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
@@ -132,10 +154,8 @@ function showProducts(content, data) {
                                         <path
                                             d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
                                     </svg>
-                                </a>
-
-                            </div>
-
+                                </button>`
+            }
                         </div>             
         `
     })
@@ -144,34 +164,76 @@ showProducts(discountProducts, sliceProducts)
 showProducts(fashionProducts, sliceFashionProducts)
 showProducts(accessoriesProducts, filteredProductsThree)
 
+function addToCart(id) {
+    let item = products.find((el) => el.id === id);
+    item.number = 1;
+    carts.push(item)
+    deliveryTime: product.deliveryTime,
+     localStorage.setItem("carts", JSON.stringify(carts))
+    showProducts(discountProducts, sliceProducts)
+    showProducts(fashionProducts, sliceFashionProducts)
+    showProducts(accessoriesProducts, filteredProductsThree)
+    carousel()
+}
+function increase(id) {
+    carts = carts.map((el) => {
+        if (el.id === id) {
+            el.number += 1
+        }
+        return el
+    })
 
-    function carousel() {
-        $(document).ready(function () {
-            $(".owl-carousel").owlCarousel();
-        });
-
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: false,
-            dots: false,
-            autoplay: false,
-            responsive: {
-                0: {
-                    items: 1.7,
-                },
-                600: {
-                    items: 2.4,
-                },
-                700: {
-                    items: 3.2,
-                },
-                1000: {
-                    items: 4,
-                },
-            },
-        });
+    localStorage.setItem("carts", JSON.stringify(carts));
+    showProducts(discountProducts, sliceProducts)
+    showProducts(fashionProducts, sliceFashionProducts)
+    showProducts(accessoriesProducts, filteredProductsThree)
+    carousel()
+}
+function decraese(id) {
+    let item = carts.find((el) => el.id === id)
+    carts = carts.map((el) => {
+        if (el.id === id) {
+            el.number -= 1
+        }
+        return el
+    })
+    if (item.number < 1) {
+        carts = carts.filter((el) => el.id !== id)
     }
+    localStorage.setItem("carts", JSON.stringify(carts));
+    showProducts(discountProducts, sliceProducts)
+    showProducts(fashionProducts, sliceFashionProducts)
+    showProducts(accessoriesProducts, filteredProductsThree)
+    carousel()
+}
+
+
+function carousel() {
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+    });
+
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: false,
+        autoplay: false,
+        responsive: {
+            0: {
+                items: 1.7,
+            },
+            600: {
+                items: 2.4,
+            },
+            1000: {
+                items: 4,
+            },
+        },
+    });
+}
 carousel()
+
+
 
 

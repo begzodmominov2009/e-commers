@@ -1,18 +1,21 @@
 let input = document.getElementById("input")
-let searchCards = document.getElementById("search-cards")
+let searchCard = document.querySelector(".search-card")
 
 input.addEventListener("input", (e) => {
-    let inputValues = e.target.value;
+    let inputValues = e.target.value.trim();
     let searchProducts = products.filter((el) => el.name.toUpperCase().includes(inputValues.toUpperCase()));
+    console.log(searchCard);
+    
     if (inputValues) {
-        searchCards.classList.remove("hidden")
+        searchCard.classList.remove("hidden")
+        searchCard.innerHTML = ""
     } else {
-        searchCards.classList.add("hidden")
-        searchCards.innerHTML = ""
+        searchCard.classList.add("hidden")
+        searchCard.innerHTML = ""
     }
     searchProducts.length > 0 ?
     searchProducts.map((el) => {
-        searchCards.innerHTML += `
+        searchCard.innerHTML += `
                             <div
                                 class="flex items-center justify-between gap-[12px] bg-[white] w-full rounded-[4px] p-[7px] border-[1px] border-[#DEDEE2]">
                                 <div class="flex items-center gap-[12px]">
@@ -27,6 +30,6 @@ input.addEventListener("input", (e) => {
                                 </a>
                             </div>
         `
-    }) : searchCards.innerHTML =  `<div class="text-center">Bunday maxulot mavjud emas</div>`
+    }) : searchCard.innerHTML =  `<div class="text-center">Такого товара нет ✅</div>`
 
 })
