@@ -10,6 +10,8 @@ let carts = JSON.parse(localStorage.getItem("carts") || "[]")
 localStorage.setItem("carts", JSON.stringify(carts))
 
 function destroyCarousel() {
+    let current = $(".owl-carousel").owlCarousel().data('owl.carousel').relative();
+    localStorage.setItem("carouselPos", current);
     $(".owl-carousel").trigger("destroy.owl.carousel");
 }
 function showProducts(content, data) {
@@ -17,7 +19,7 @@ function showProducts(content, data) {
     data.map((el) => {
         content.innerHTML += `
                          <div
-                            class="hover:shadow-xl cursor-pointer  bg-[white] max-w-[350px] w-full border-[1px] rounded-[6px] overflow-hidden p-[7px] sm:p-[15px]  border-[#E3E3E8]">
+                            class="hover:shadow-xl cursor-pointer  bg-[white] max-w-[350px] w-full border-[1px] rounded-[6px] overflow-hidden p-[7px] sm:p-[12px]  border-[#E3E3E8]">
                          <div class="flex items-center justify-center w-full">
                                 <img class="h-[110px] w-[100px] sm:w-[140px]  object-contain sm:h-[160px]" src=${el.image[0]} alt="Img" />
                             </div>
@@ -135,7 +137,7 @@ function showProducts(content, data) {
                 `<div class="flex items-center gap-[5px] w-[100px]">
                                 <button
                                 onClick="decraese(${el.id})"
-                                    class="border-[2px] w-full group cursor-pointer group border-[#5946D7] p-[5px]  rounded-[10px] bg-[#5946D7] hover:border-[#5946D7] duration-200 inline-flex items-center justify-center">
+                                    class="border-[2px] w-full group cursor-pointer group border-[#5946D7] p-[2.5px] sm:p-[5px]  rounded-[10px] bg-[#5946D7] hover:border-[#5946D7] duration-200 inline-flex items-center justify-center">
                                     <svg class="fill-white h-[20px] sm:h-[20px] w-[20px] sm:w-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#5946D7"><path d="M240-440v-80h480v80H240Z"/></svg>
                                 </button>
                                  <span
@@ -144,7 +146,7 @@ function showProducts(content, data) {
                                 </span>
                                  <button
                                  onClick="increase(${el.id})"
-                                    class="border-[2px] group w-full cursor-pointer group border-[#5946D7] p-[5px]  rounded-[10px] bg-[#5946D7] hover:border-[#5946D7] duration-200 inline-flex items-center justify-center">
+                                    class="border-[2px] group w-full cursor-pointer group border-[#5946D7] p-[2.5px] sm:p-[5px]  rounded-[10px] bg-[#5946D7] hover:border-[#5946D7] duration-200 inline-flex items-center justify-center">
                                     <svg class="fill-white h-[20px] sm:h-[20px] w-[20px] sm:w-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#5946D7"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg></button>
 
                                 </div>
@@ -177,6 +179,7 @@ function addToCart(id) {
     showProducts(discountProducts, sliceProducts)
     showProducts(fashionProducts, sliceFashionProducts)
     showProducts(accessoriesProducts, filteredProductsThree)
+    destroyCarousel();
     initCarousel()
 }
 function increase(id) {
