@@ -9,14 +9,17 @@ let sliceProducts = filteredProducts.slice(0, 4);
 let carts = JSON.parse(localStorage.getItem("carts") || "[]")
 localStorage.setItem("carts", JSON.stringify(carts))
 
+function destroyCarousel() {
+    $(".owl-carousel").trigger("destroy.owl.carousel");
+}
 function showProducts(content, data) {
     content.innerHTML = ""
     data.map((el) => {
         content.innerHTML += `
                          <div
                             class="hover:shadow-xl cursor-pointer  bg-[white] max-w-[350px] w-full border-[1px] rounded-[6px] overflow-hidden p-[7px] sm:p-[15px]  border-[#E3E3E8]">
-                            <div class="flex items-center justify-center w-full">
-                                <img class="h-[170px] w-[70px] sm:w-[100px] sm:h-[200px]" src=${el.image[0]} alt="Img" />
+                         <div class="flex items-center justify-center w-full">
+                                <img class="h-[110px] w-[100px] sm:w-[140px]  object-contain sm:h-[160px]" src=${el.image[0]} alt="Img" />
                             </div>
                             <div class='flex items-center justify-between gap-[10px] pt-[14px]'>
                                 <p class='text-[#7A7680] text-[9px] sm:text-[12px] xl:text-[13px] whitespace-nowrap'>
@@ -159,6 +162,8 @@ function showProducts(content, data) {
                         </div>             
         `
     })
+    destroyCarousel();
+    initCarousel();
 }
 showProducts(discountProducts, sliceProducts)
 showProducts(fashionProducts, sliceFashionProducts)
@@ -168,12 +173,11 @@ function addToCart(id) {
     let item = products.find((el) => el.id === id);
     item.number = 1;
     carts.push(item)
-    deliveryTime: product.deliveryTime,
-     localStorage.setItem("carts", JSON.stringify(carts))
+    localStorage.setItem("carts", JSON.stringify(carts))
     showProducts(discountProducts, sliceProducts)
     showProducts(fashionProducts, sliceFashionProducts)
     showProducts(accessoriesProducts, filteredProductsThree)
-    carousel()
+    initCarousel()
 }
 function increase(id) {
     carts = carts.map((el) => {
@@ -182,12 +186,11 @@ function increase(id) {
         }
         return el
     })
-
     localStorage.setItem("carts", JSON.stringify(carts));
     showProducts(discountProducts, sliceProducts)
     showProducts(fashionProducts, sliceFashionProducts)
     showProducts(accessoriesProducts, filteredProductsThree)
-    carousel()
+    initCarousel()
 }
 function decraese(id) {
     let item = carts.find((el) => el.id === id)
@@ -204,15 +207,11 @@ function decraese(id) {
     showProducts(discountProducts, sliceProducts)
     showProducts(fashionProducts, sliceFashionProducts)
     showProducts(accessoriesProducts, filteredProductsThree)
-    carousel()
+    initCarousel()
 }
 
 
-function carousel() {
-    $(document).ready(function () {
-        $(".owl-carousel").owlCarousel();
-    });
-
+function initCarousel() {
     $(".owl-carousel").owlCarousel({
         loop: true,
         margin: 10,
@@ -220,19 +219,13 @@ function carousel() {
         dots: false,
         autoplay: false,
         responsive: {
-            0: {
-                items: 1.7,
-            },
-            600: {
-                items: 2.4,
-            },
-            1000: {
-                items: 4,
-            },
+            0: { items: 1.7 },
+            600: { items: 2.4 },
+            1000: { items: 4.4 },
         },
     });
 }
-carousel()
+initCarousel()
 
 
 

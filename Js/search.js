@@ -2,7 +2,7 @@ let input = document.getElementById("input")
 let searchCard = document.querySelector(".search-card")
 
 input.addEventListener("input", (e) => {
-    let inputValues = e.target.value.trim();
+    let inputValues = e.target.value.trim();    
     let searchProducts = products.filter((el) => el.name.toUpperCase().includes(inputValues.toUpperCase()));
     console.log(searchCard);
     
@@ -26,7 +26,7 @@ input.addEventListener("input", (e) => {
                                     </div>
                                 </div>
                                 <a href="./Pages/single.html" class="cursor-pointer">
-                                    <img class="w-[24px] h-[24px]" src="./assets/header/visibility_24dp_5946D7_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                                    <img class="w-[24px] h-[24px]" src="../assets/header/visibility_24dp_5946D7_FILL0_wght400_GRAD0_opsz24.svg" alt="">
                                 </a>
                             </div>
         `
