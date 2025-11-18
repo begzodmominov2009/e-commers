@@ -539,4 +539,874 @@ let products = [
             "../assets/images/products/30_4.png",
         ],
     },
+    {
+        id: 31,
+        name: "Portable SSD 1TB",
+        category: "Electronics",
+        brand: "Samsung",
+        description: "High-speed external SSD with USB-C connection.",
+        price: 119.99,
+        discount: 149.99,
+        deliveryTime: 3,
+        rating: 4.5,
+        article: 23013,
+        image: [
+            "../assets/images/products/31_1.png",
+            "../assets/images/products/31_2.png",
+            "../assets/images/products/31_3.png",
+            "../assets/images/products/31_4.png",
+        ],
+    },
+    {
+        id: 32,
+        name: "HD Webcam",
+        category: "Electronics",
+        brand: "Logitech",
+        description: "1080p webcam with autofocus and dual microphones.",
+        price: 49.99,
+        discount: 69.99,
+        deliveryTime: 4,
+        rating: 4.0,
+        article: 23014,
+        image: [
+            "../assets/images/products/32_1.png",
+            "../assets/images/products/32_2.png",
+            "../assets/images/products/32_3.png",
+            "../assets/images/products/32_4.png"
+        ]
+    },
+    {
+        id: 33,
+        name: "USB-C Fast Charger",
+        category: "Electronics",
+        brand: "Anker",
+        description: "30W fast charger with Power Delivery technology.",
+        price: 19.99,
+        discount: 29.99,
+        deliveryTime: 1,
+        rating: 4.5,
+        article: 23015,
+        image: [
+            "../assets/images/products/33_1.png",
+            "../assets/images/products/33_2.png",
+            "../assets/images/products/33_3.png",
+            "../assets/images/products/33_4.png"
+        ]
+    },
+    {
+        id: 34,
+        name: "Bluetooth Headset",
+        category: "Electronics",
+        brand: "Sony",
+        description: "Lightweight headset with HD microphone and long battery.",
+        price: 34.99,
+        discount: 49.99,
+        deliveryTime: 2,
+        rating: 4.0,
+        article: 23016,
+        image: [
+            "../assets/images/products/34_1.png",
+            "../assets/images/products/34_2.png",
+            "../assets/images/products/34_3.png",
+            "../assets/images/products/34_4.png"
+        ]
+    },
+    {
+        id: 35,
+        name: "Portable Mini Projector",
+        category: "Electronics",
+        brand: "Xiaomi",
+        description: "Compact projector with 1080p support and built-in speaker.",
+        price: 89.99,
+        discount: 119.99,
+        deliveryTime: 5,
+        rating: 4.5,
+        article: 23017,
+        image: [
+            "../assets/images/products/35_1.png",
+            "../assets/images/products/35_2.png",
+            "../assets/images/products/35_3.png",
+            "../assets/images/products/35_4.png"
+        ]
+    },
+    {
+        id: 36,
+        name: "Classic Jacket",
+        category: "Fashion",
+        brand: "Zara",
+        description: "Warm winter jacket with modern design.",
+        price: 59.99,
+        discount: 79.99,
+        deliveryTime: 4,
+        rating: 4.0,
+        article: 24006,
+
+        image: [
+            "../assets/images/products/36_1.png",
+            "../assets/images/products/36_2.png",
+            "../assets/images/products/36_3.png",
+            "../assets/images/products/36_4.png"
+        ]
+    },
+    {
+        id: 37,
+        name: "Sport Shorts",
+        category: "Fashion",
+        brand: "Nike",
+        description: "Breathable shorts for running and fitness.",
+        price: 24.99,
+        discount: 39.99,
+        deliveryTime: 3,
+        rating: 4.5,
+        article: 24007,
+        image: [
+            "../assets/images/products/37_1.png",
+            "../assets/images/products/37_2.png",
+            "../assets/images/products/37_3.png",
+            "../assets/images/products/37_4.png"
+        ]
+    },
+    {
+        id: 38,
+        name: "Oversize Hoodie",
+        category: "Fashion",
+        brand: "H&M",
+        description: "Soft oversize hoodie for daily comfort.",
+        price: 34.99,
+        discount: 49.99,
+        deliveryTime: 6,
+        rating: 4.0,
+        article: 24008,
+        image: [
+            "../assets/images/products/38_1.png",
+            "../assets/images/products/38_2.png",
+            "../assets/images/products/38_3.png",
+            "../assets/images/products/38_4.png"
+        ]
+    },
+    {
+        id: 39,
+        name: "Slim Fit Shirt",
+        category: "Fashion",
+        brand: "Levi’s",
+        description: "Elegant slim fit casual shirt.",
+        price: 29.99,
+        discount: 45.99,
+        deliveryTime: 2,
+        rating: 4.5,
+        article: 24009,
+        image: [
+            "../assets/images/products/39_1.png",
+            "../assets/images/products/39_2.png",
+            "../assets/images/products/39_3.png",
+            "../assets/images/products/39_4.png"
+        ]
+    },
+    // {
+    //     id: 40,
+    //     name: "Premium Jacket",
+    //     category: "Fashion",
+    //     brand: "Adidas",
+    //     description: "Windproof and comfortable fabric jacket.",
+    //     price: 69.99,
+    //     discount: 99.99,
+    //     deliveryTime: 3,
+    //     rating: 5.0,
+    //     article: 24010,
+    //     image: ["../assets/images/products/40_1.png", "../assets/images/products/40_2.png", "../assets/images/products/40_3.png", "../assets/images/products/40_4.png"]
+    // }, {
+    //     id: 41,
+    //     name: "Metal Keychain",
+    //     category: "Accessories",
+    //     brand: "Fossil",
+    //     description: "Durable metal keychain for daily use.",
+    //     price: 9.99,
+    //     discount: 14.99,
+    //     deliveryTime: 1,
+    //     rating: 4.0,
+    //     article: 25004,
+    //     image: ["../assets/images/products/41_1.png", "../assets/images/products/41_2.png", "../assets/images/products/41_3.png", "../assets/images/products/41_4.png"]
+    // },
+    // {
+    //     id: 42,
+    //     name: "Design Ring",
+    //     category: "Accessories",
+    //     brand: "Gucci",
+    //     description: "Premium designed ring with metal carving.",
+    //     price: 19.99,
+    //     discount: 29.99,
+    //     deliveryTime: 5,
+    //     rating: 4.5,
+    //     article: 25005,
+    //     image: ["../assets/images/products/42_1.png", "../assets/images/products/42_2.png", "../assets/images/products/42_3.png", "../assets/images/products/42_4.png"]
+    // },
+    // {
+    //     id: 43,
+    //     name: "Leather Belt",
+    //     category: "Accessories",
+    //     brand: "Ray-Ban",
+    //     description: "Genuine leather belt for men.",
+    //     price: 29.99,
+    //     discount: 49.99,
+    //     deliveryTime: 3,
+    //     rating: 4.0,
+    //     article: 25006,
+    //     image: ["../assets/images/products/43_1.png", "../assets/images/products/43_2.png", "../assets/images/products/43_3.png", "../assets/images/products/43_4.png"]
+    // },
+    // {
+    //     id: 44,
+    //     name: "Women’s Bracelet",
+    //     category: "Accessories",
+    //     brand: "Fossil",
+    //     description: "Elegant bracelet made of premium steel.",
+    //     price: 14.99,
+    //     discount: 22.99,
+    //     deliveryTime: 4,
+    //     rating: 4.5,
+    //     article: 25007,
+    //     image: ["../assets/images/products/44_1.png", "../assets/images/products/44_2.png", "../assets/images/products/44_3.png", "../assets/images/products/44_4.png"]
+    // },
+    // {
+    //     id: 45,
+    //     name: "Premium Sunglasses",
+    //     category: "Accessories",
+    //     brand: "Ray-Ban",
+    //     description: "UV400 protection stylish sunglasses.",
+    //     price: 39.99,
+    //     discount: 59.99,
+    //     deliveryTime: 2,
+    //     rating: 5.0,
+    //     article: 25008,
+    //     image: ["../assets/images/products/45_1.png", "../assets/images/products/45_2.png", "../assets/images/products/45_3.png", "../assets/images/products/45_4.png"]
+    // },
+    // {
+    //     id: 46,
+    //     name: "Travel Backpack",
+    //     category: "Bags",
+    //     brand: "SwissGear",
+    //     description: "Multi-pocket travel backpack with laptop section.",
+    //     price: 39.99,
+    //     discount: 59.99,
+    //     deliveryTime: 4,
+    //     rating: 4.7,
+    //     article: 23028,
+    //     image: [
+    //         "../assets/images/products/46_1.png",
+    //         "../assets/images/products/46_2.png",
+    //         "../assets/images/products/46_3.png",
+    //         "../assets/images/products/46_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 47,
+    //     name: "Shoulder Handbag",
+    //     category: "Bags",
+    //     brand: "Michael Kors",
+    //     description: "Elegant PU leather handbag for everyday use.",
+    //     price: 54.99,
+    //     discount: 79.99,
+    //     deliveryTime: 3,
+    //     rating: 4.6,
+    //     article: 23029,
+    //     image: [
+    //         "../assets/images/products/47_1.png",
+    //         "../assets/images/products/47_2.png",
+    //         "../assets/images/products/47_3.png",
+    //         "../assets/images/products/47_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 48,
+    //     name: "Men’s Crossbody Bag",
+    //     category: "Bags",
+    //     brand: "Nike",
+    //     description: "Compact crossbody bag with adjustable strap.",
+    //     price: 24.99,
+    //     discount: 34.99,
+    //     deliveryTime: 2,
+    //     rating: 4.4,
+    //     article: 23030,
+    //     image: [
+    //         "../assets/images/products/48_1.png",
+    //         "../assets/images/products/48_2.png",
+    //         "../assets/images/products/48_3.png",
+    //         "../assets/images/products/48_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 49,
+    //     name: "Mini Shoulder Bag",
+    //     category: "Bags",
+    //     brand: "Zara",
+    //     description: "Minimalist compact bag for essentials.",
+    //     price: 17.99,
+    //     discount: 25.99,
+    //     deliveryTime: 2,
+    //     rating: 4.2,
+    //     article: 23031,
+    //     image: [
+    //         "../assets/images/products/49_1.png",
+    //         "../assets/images/products/49_2.png",
+    //         "../assets/images/products/49_3.png",
+    //         "../assets/images/products/49_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 50,
+    //     name: "Gym Duffel Bag",
+    //     category: "Bags",
+    //     brand: "Adidas",
+    //     description: "Spacious duffel bag with wet-clothes compartment.",
+    //     price: 29.99,
+    //     discount: 44.99,
+    //     deliveryTime: 3,
+    //     rating: 4.5,
+    //     article: 23032,
+    //     image: [
+    //         "../assets/images/products/50_1.png",
+    //         "../assets/images/products/50_2.png",
+    //         "../assets/images/products/50_3.png",
+    //         "../assets/images/products/50_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 51,
+    //     name: "Electric Kettle 1.7L",
+    //     category: "Home Appliances",
+    //     brand: "Philips",
+    //     description: "Fast boiling kettle with auto shut-off protection.",
+    //     price: 29.99,
+    //     discount: 39.99,
+    //     deliveryTime: 2,
+    //     rating: 4.6,
+    //     article: 23033,
+    //     image: [
+    //         "../assets/images/products/51_1.png",
+    //         "../assets/images/products/51_2.png",
+    //         "../assets/images/products/51_3.png",
+    //         "../assets/images/products/51_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 52,
+    //     name: "Air Fryer 4L",
+    //     category: "Home Appliances",
+    //     brand: "Xiaomi",
+    //     description: "Oil-free healthy cooking with 360° air circulation.",
+    //     price: 89.99,
+    //     discount: 119.99,
+    //     deliveryTime: 4,
+    //     rating: 4.8,
+    //     article: 23034,
+    //     image: [
+    //         "../assets/images/products/52_1.png",
+    //         "../assets/images/products/52_2.png",
+    //         "../assets/images/products/52_3.png",
+    //         "../assets/images/products/52_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 53,
+    //     name: "Small Vacuum Cleaner",
+    //     category: "Home Appliances",
+    //     brand: "Bosch",
+    //     description: "Compact vacuum cleaner with powerful suction.",
+    //     price: 59.99,
+    //     discount: 89.99,
+    //     deliveryTime: 3,
+    //     rating: 4.4,
+    //     article: 23035,
+    //     image: [
+    //         "../assets/images/products/53_1.png",
+    //         "../assets/images/products/53_2.png",
+    //         "../assets/images/products/53_3.png",
+    //         "../assets/images/products/53_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 54,
+    //     name: "Steam Iron",
+    //     category: "Home Appliances",
+    //     brand: "Tefal",
+    //     description: "Non-stick soleplate with strong steam boost.",
+    //     price: 34.99,
+    //     discount: 49.99,
+    //     deliveryTime: 2,
+    //     rating: 4.3,
+    //     article: 23036,
+    //     image: [
+    //         "../assets/images/products/54_1.png",
+    //         "../assets/images/products/54_2.png",
+    //         "../assets/images/products/54_3.png",
+    //         "../assets/images/products/54_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 55,
+    //     name: "Mini Washing Machine",
+    //     category: "Home Appliances",
+    //     brand: "Haier",
+    //     description: "Portable compact washer ideal for small spaces.",
+    //     price: 129.99,
+    //     discount: 159.99,
+    //     deliveryTime: 5,
+    //     rating: 4.7,
+    //     article: 23037,
+    //     image: [
+    //         "../assets/images/products/55_1.png",
+    //         "../assets/images/products/55_2.png",
+    //         "../assets/images/products/55_3.png",
+    //         "../assets/images/products/55_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 56,
+    //     name: "LED Wall Lamp",
+    //     category: "Home Decor",
+    //     brand: "IKEA",
+    //     description: "Minimal LED lamp perfect for bedroom or hallway.",
+    //     price: 19.99,
+    //     discount: 29.99,
+    //     deliveryTime: 2,
+    //     rating: 4.4,
+    //     article: 23038,
+    //     image: [
+    //         "../assets/images/products/56_1.png",
+    //         "../assets/images/products/56_2.png",
+    //         "../assets/images/products/56_3.png",
+    //         "../assets/images/products/56_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 57,
+    //     name: "Decorative Plant",
+    //     category: "Home Decor",
+    //     brand: "GreenJoy",
+    //     description: "Artificial plant with natural look and durable pot.",
+    //     price: 12.99,
+    //     discount: 18.99,
+    //     deliveryTime: 3,
+    //     rating: 4.5,
+    //     article: 23039,
+    //     image: [
+    //         "../assets/images/products/57_1.png",
+    //         "../assets/images/products/57_2.png",
+    //         "../assets/images/products/57_3.png",
+    //         "../assets/images/products/57_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 58,
+    //     name: "Wall Clock",
+    //     category: "Home Decor",
+    //     brand: "Quartz",
+    //     description: "Silent sweep movement modern wall clock.",
+    //     price: 14.99,
+    //     discount: 22.99,
+    //     deliveryTime: 2,
+    //     rating: 4.2,
+    //     article: 23040,
+    //     image: [
+    //         "../assets/images/products/58_1.png",
+    //         "../assets/images/products/58_2.png",
+    //         "../assets/images/products/58_3.png",
+    //         "../assets/images/products/58_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 59,
+    //     name: "Modern Table Lamp",
+    //     category: "Home Decor",
+    //     brand: "Philips",
+    //     description: "Warm light, suitable for work desk or bedroom.",
+    //     price: 24.99,
+    //     discount: 34.99,
+    //     deliveryTime: 3,
+    //     rating: 4.6,
+    //     article: 23041,
+    //     image: [
+    //         "../assets/images/products/59_1.png",
+    //         "../assets/images/products/59_2.png",
+    //         "../assets/images/products/59_3.png",
+    //         "../assets/images/products/59_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 60,
+    //     name: "Canvas Wall Art",
+    //     category: "Home Decor",
+    //     brand: "ArtHouse",
+    //     description: "High-quality printed artwork for living room.",
+    //     price: 17.99,
+    //     discount: 27.99,
+    //     deliveryTime: 4,
+    //     rating: 4.3,
+    //     article: 23042,
+    //     image: [
+    //         "../assets/images/products/60_1.png",
+    //         "../assets/images/products/60_2.png",
+    //         "../assets/images/products/60_3.png",
+    //         "../assets/images/products/60_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 61,
+    //     name: "Football Ball",
+    //     category: "Sports",
+    //     brand: "Adidas",
+    //     description: "High-quality training football, size 5.",
+    //     price: 24.99,
+    //     discount: 34.99,
+    //     deliveryTime: 2,
+    //     rating: 4.6,
+    //     article: 23043,
+    //     image: [
+    //         "../assets/images/products/61_1.png",
+    //         "../assets/images/products/61_2.png",
+    //         "../assets/images/products/61_3.png",
+    //         "../assets/images/products/61_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 62,
+    //     name: "Jump Rope",
+    //     category: "Sports",
+    //     brand: "Decathlon",
+    //     description: "Adjustable jump rope with anti-slip handles.",
+    //     price: 7.99,
+    //     discount: 12.99,
+    //     deliveryTime: 1,
+    //     rating: 4.3,
+    //     article: 23044,
+    //     image: [
+    //         "../assets/images/products/62_1.png",
+    //         "../assets/images/products/62_2.png",
+    //         "../assets/images/products/62_3.png",
+    //         "../assets/images/products/62_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 63,
+    //     name: "Yoga Mat",
+    //     category: "Sports",
+    //     brand: "Nike",
+    //     description: "Non-slip yoga mat with soft cushioning.",
+    //     price: 19.99,
+    //     discount: 29.99,
+    //     deliveryTime: 3,
+    //     rating: 4.5,
+    //     article: 23045,
+    //     image: [
+    //         "../assets/images/products/63_1.png",
+    //         "../assets/images/products/63_2.png",
+    //         "../assets/images/products/63_3.png",
+    //         "../assets/images/products/63_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 64,
+    //     name: "Dumbbell Set 5kg",
+    //     category: "Sports",
+    //     brand: "Reebok",
+    //     description: "Pair of 5kg dumbbells with rubber coating.",
+    //     price: 34.99,
+    //     discount: 49.99,
+    //     deliveryTime: 4,
+    //     rating: 4.7,
+    //     article: 23046,
+    //     image: [
+    //         "../assets/images/products/64_1.png",
+    //         "../assets/images/products/64_2.png",
+    //         "../assets/images/products/64_3.png",
+    //         "../assets/images/products/64_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 65,
+    //     name: "Running Shorts",
+    //     category: "Sports",
+    //     brand: "Puma",
+    //     description: "Lightweight breathable running shorts.",
+    //     price: 14.99,
+    //     discount: 22.99,
+    //     deliveryTime: 2,
+    //     rating: 4.4,
+    //     article: 23047,
+    //     image: [
+    //         "../assets/images/products/65_1.png",
+    //         "../assets/images/products/65_2.png",
+    //         "../assets/images/products/65_3.png",
+    //         "../assets/images/products/65_4.png"
+    //     ]
+    // }
+    //     {
+    //     id: 66,
+    //     name: "Face Serum",
+    //     category: "Beauty",
+    //     brand: "The Ordinary",
+    //     description: "Hydrating serum with hyaluronic acid.",
+    //     price: 12.99,
+    //     discount: 19.99,
+    //     deliveryTime: 2,
+    //     rating: 4.6,
+    //     article: 23048,
+    //     image: [
+    //         "../assets/images/products/66_1.png",
+    //         "../assets/images/products/66_2.png",
+    //         "../assets/images/products/66_3.png",
+    //         "../assets/images/products/66_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 67,
+    //     name: "Hair Dryer",
+    //     category: "Beauty",
+    //     brand: "Remington",
+    //     description: "Fast-drying 2000W hair dryer with cool shot.",
+    //     price: 24.99,
+    //     discount: 34.99,
+    //     deliveryTime: 3,
+    //     rating: 4.5,
+    //     article: 23049,
+    //     image: [
+    //         "../assets/images/products/67_1.png",
+    //         "../assets/images/products/67_2.png",
+    //         "../assets/images/products/67_3.png",
+    //         "../assets/images/products/67_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 68,
+    //     name: "Makeup Brush Set",
+    //     category: "Beauty",
+    //     brand: "BeautyPro",
+    //     description: "10-piece soft fiber makeup brush kit.",
+    //     price: 17.99,
+    //     discount: 27.99,
+    //     deliveryTime: 2,
+    //     rating: 4.4,
+    //     article: 23050,
+    //     image: [
+    //         "../assets/images/products/68_1.png",
+    //         "../assets/images/products/68_2.png",
+    //         "../assets/images/products/68_3.png",
+    //         "../assets/images/products/68_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 69,
+    //     name: "Nail Polish Set",
+    //     category: "Beauty",
+    //     brand: "O.P.I",
+    //     description: "Long-lasting nail polish in 6 colors.",
+    //     price: 14.99,
+    //     discount: 22.99,
+    //     deliveryTime: 3,
+    //     rating: 4.3,
+    //     article: 23051,
+    //     image: [
+    //         "../assets/images/products/69_1.png",
+    //         "../assets/images/products/69_2.png",
+    //         "../assets/images/products/69_3.png",
+    //         "../assets/images/products/69_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 70,
+    //     name: "Perfume Spray",
+    //     category: "Beauty",
+    //     brand: "Calvin Klein",
+    //     description: "Fresh daily-use unisex perfume.",
+    //     price: 24.99,
+    //     discount: 34.99,
+    //     deliveryTime: 2,
+    //     rating: 4.5,
+    //     article: 23052,
+    //     image: [
+    //         "../assets/images/products/70_1.png",
+    //         "../assets/images/products/70_2.png",
+    //         "../assets/images/products/70_3.png",
+    //         "../assets/images/products/70_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 71,
+    //     name: "Wooden Coffee Table",
+    //     category: "Furniture",
+    //     brand: "IKEA",
+    //     description: "Minimal coffee table with natural wood finish.",
+    //     price: 49.99,
+    //     discount: 69.99,
+    //     deliveryTime: 5,
+    //     rating: 4.6,
+    //     article: 23053,
+    //     image: [
+    //         "../assets/images/products/71_1.png",
+    //         "../assets/images/products/71_2.png",
+    //         "../assets/images/products/71_3.png",
+    //         "../assets/images/products/71_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 72,
+    //     name: "Office Chair",
+    //     category: "Furniture",
+    //     brand: "ErgoSeat",
+    //     description: "Ergonomic chair with adjustable back support.",
+    //     price: 89.99,
+    //     discount: 119.99,
+    //     deliveryTime: 4,
+    //     rating: 4.7,
+    //     article: 23054,
+    //     image: [
+    //         "../assets/images/products/72_1.png",
+    //         "../assets/images/products/72_2.png",
+    //         "../assets/images/products/72_3.png",
+    //         "../assets/images/products/72_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 73,
+    //     name: "Bedside Table",
+    //     category: "Furniture",
+    //     brand: "HomePro",
+    //     description: "Compact nightstand with drawer storage.",
+    //     price: 39.99,
+    //     discount: 59.99,
+    //     deliveryTime: 3,
+    //     rating: 4.4,
+    //     article: 23055,
+    //     image: [
+    //         "../assets/images/products/73_1.png",
+    //         "../assets/images/products/73_2.png",
+    //         "../assets/images/products/73_3.png",
+    //         "../assets/images/products/73_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 74,
+    //     name: "Bookshelf 5-Tier",
+    //     category: "Furniture",
+    //     brand: "WoodLand",
+    //     description: "Tall wooden bookshelf for home and office.",
+    //     price: 69.99,
+    //     discount: 94.99,
+    //     deliveryTime: 6,
+    //     rating: 4.5,
+    //     article: 23056,
+    //     image: [
+    //         "../assets/images/products/74_1.png",
+    //         "../assets/images/products/74_2.png",
+    //         "../assets/images/products/74_3.png",
+    //         "../assets/images/products/74_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 75,
+    //     name: "Soft Bean Bag",
+    //     category: "Furniture",
+    //     brand: "CozyLife",
+    //     description: "Comfortable bean bag chair for living rooms.",
+    //     price: 34.99,
+    //     discount: 49.99,
+    //     deliveryTime: 3,
+    //     rating: 4.3,
+    //     article: 23057,
+    //     image: [
+    //         "../assets/images/products/75_1.png",
+    //         "../assets/images/products/75_2.png",
+    //         "../assets/images/products/75_3.png",
+    //         "../assets/images/products/75_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 76,
+    //     name: "Non-stick Frying Pan",
+    //     category: "Home & Kitchen",
+    //     brand: "Tefal",
+    //     description: "Durable non-stick pan perfect for daily cooking.",
+    //     price: 19.99,
+    //     discount: 27.99,
+    //     deliveryTime: 2,
+    //     rating: 4.6,
+    //     article: 23058,
+    //     image: [
+    //         "../assets/images/products/76_1.png",
+    //         "../assets/images/products/76_2.png",
+    //         "../assets/images/products/76_3.png",
+    //         "../assets/images/products/76_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 77,
+    //     name: "Knife Set 6pcs",
+    //     category: "Home & Kitchen",
+    //     brand: "RoyalChef",
+    //     description: "Stainless steel knife set with wood block.",
+    //     price: 24.99,
+    //     discount: 34.99,
+    //     deliveryTime: 3,
+    //     rating: 4.5,
+    //     article: 23059,
+    //     image: [
+    //         "../assets/images/products/77_1.png",
+    //         "../assets/images/products/77_2.png",
+    //         "../assets/images/products/77_3.png",
+    //         "../assets/images/products/77_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 78,
+    //     name: "Cutting Board",
+    //     category: "Home & Kitchen",
+    //     brand: "EcoWood",
+    //     description: "Large bamboo cutting board with juice groove.",
+    //     price: 14.99,
+    //     discount: 21.99,
+    //     deliveryTime: 2,
+    //     rating: 4.4,
+    //     article: 23060,
+    //     image: [
+    //         "../assets/images/products/78_1.png",
+    //         "../assets/images/products/78_2.png",
+    //         "../assets/images/products/78_3.png",
+    //         "../assets/images/products/78_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 79,
+    //     name: "Glass Cup Set",
+    //     category: "Home & Kitchen",
+    //     brand: "Luminarc",
+    //     description: "Set of 6 transparent heat-resistant glasses.",
+    //     price: 12.99,
+    //     discount: 18.99,
+    //     deliveryTime: 3,
+    //     rating: 4.3,
+    //     article: 23061,
+    //     image: [
+    //         "../assets/images/products/79_1.png",
+    //         "../assets/images/products/79_2.png",
+    //         "../assets/images/products/79_3.png",
+    //         "../assets/images/products/79_4.png"
+    //     ]
+    // },
+    // {
+    //     id: 80,
+    //     name: "Stainless Steel Pot",
+    //     category: "Home & Kitchen",
+    //     brand: "ChefMaster",
+    //     description: "High-quality deep pot with heat-proof handles.",
+    //     price: 29.99,
+    //     discount: 39.99,
+    //     deliveryTime: 3,
+    //     rating: 4.5,
+    //     article: 23062,
+    //     image: [
+    //         "../assets/images/products/80_1.png",
+    //         "../assets/images/products/80_2.png",
+    //         "../assets/images/products/80_3.png",
+    //         "../assets/images/products/80_4.png"
+    //     ]
+    // }
 ];

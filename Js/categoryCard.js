@@ -6,6 +6,7 @@ let categoryProdcuts = document.getElementById("category-products")
 let filteredCards = products.filter((el) => el.category === categoryName)
 
 let carts = JSON.parse(localStorage.getItem("carts") || "[]")
+let likes = JSON.parse(localStorage.getItem("likes") || "[]")
 let title = document.getElementById("title")
 title.textContent = categoryName
 
@@ -14,15 +15,15 @@ function showCategories(content, data) {
     data.map((el) => {
         content.innerHTML += `
                          <div
-                            class="hover:shadow-xl cursor-pointer  bg-[white] max-w-[420px] w-full border-[1px] rounded-[6px] overflow-hidden p-[7px] sm:p-[12px]  border-[#E3E3E8]">
-                            <div class="flex items-center justify-center w-full">
+                            class="hover:shadow-xl relative cursor-pointer  bg-[white] max-w-[350px] w-full border-[1px] rounded-[6px] overflow-hidden p-[7px] sm:p-[12px]  border-[#E3E3E8]">
+                         <div class="flex items-center justify-center w-full">
                                 <img class="h-[110px] w-[100px] sm:w-[140px]  object-contain sm:h-[160px]" src=${el.image[0]} alt="Img" />
                             </div>
                             <div class='flex items-center justify-between gap-[10px] pt-[14px]'>
                                 <p class='text-[#7A7680] text-[9px] sm:text-[12px] xl:text-[13px] whitespace-nowrap'>
                                     Артикул: ${el.article}</p>
                                 ${el.rating === 5 ? `
-                            <div class="flex gap-[4px] px-[8px] pt-[2px] sm:pt-[4px]">
+                            <div class="flex gap-[2px] sm:gap-[4px] px-[8px] pt-[2px] sm:pt-[4px]">
                                 <img class="w-[12px] sm:w-[16px] h-[12px] sm:h-[16px]" src="../assets/images/stars/to'liq.svg" alt="star" />
                                 <img class="w-[12px] sm:w-[16px] h-[12px] sm:h-[16px]" src="../assets/images/stars/to'liq.svg" alt="star" />
                                 <img class="w-[12px] sm:w-[16px] h-[12px] sm:h-[16px]" src="../assets/images/stars/to'liq.svg" alt="star" />
@@ -129,7 +130,7 @@ function showCategories(content, data) {
                                 </div>
                                
                             ${carts.find((cart) => cart.id === el.id) ?
-                `<div class="flex items-center gap-[5px] w-[100px]">
+                         `<div class="flex items-center gap-[5px] w-[100px]">
                                 <button
                                 onClick="decraese(${el.id})"
                                     class="border-[2px] w-full group cursor-pointer group border-[#5946D7] p-[2.5px] sm:p-[5px]  rounded-[10px] bg-[#5946D7] hover:border-[#5946D7] duration-200 inline-flex items-center justify-center">
@@ -155,10 +156,21 @@ function showCategories(content, data) {
                                             d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
                                     </svg>
                                 </button>`
-            }
+                             }
+                            ${likes.find((like) => like.id === el.id) ? `
+                            <div onClick="removeToLikes(${el.id})" class="absolute top-1 sm:top-1.5 right-1 sm:right-1.5 bg-[#5946D7] p-0.5 sm:p-1 rounded-lg">
+                            <img class="" src="../assets/cart/remove-likes.svg" alt="star" />
+                            </div>  
+                              ` : `
+                            <div onClick="addToLikes(${el.id})" class="absolute top-1 sm:top-1.5 right-1 sm:right-1.5 bg-[whitesmoke] p-0.5 sm:p-1 rounded-lg">
+                            <img class="" src="../assets/cart//add-likes.svg" alt="star" />
+                            </div>
+                       `
+                          }
                         </div>             
-        `
+                    `
     })
+   
 }
 showCategories(categoryProdcuts, filteredCards)
 
@@ -193,4 +205,17 @@ function decraese(id) {
     }
     localStorage.setItem("carts", JSON.stringify(carts));
     showCategories(categoryProdcuts, filteredCards)
+}
+function addToLikes(id) {
+    let item = products.find((el) => el.id === id)
+    likes.push(item)
+    localStorage.setItem("likes", JSON.stringify(likes))
+    showCategories(categoryProdcuts, filteredCards)
+}
+
+function removeToLikes(id) {
+    likes = likes.filter((el) => el.id !== id)
+    localStorage.setItem("likes", JSON.stringify(likes))
+    showCategories(categoryProdcuts, filteredCards)
+
 }

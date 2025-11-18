@@ -3,12 +3,20 @@ let carts = JSON.parse(localStorage.getItem("carts") || "[]")
 let cartSum = document.getElementById("cart-sum")
 let cartNumber = document.getElementById("cart-number")
 let discountInput = document.getElementById("discount-input")
+let badge = document.querySelector(".badge")
+let badge1 = document.querySelector(".badge-1")
+let allCheckedDalet = document.getElementById("all-checked-dalet")
+let allInput = document.getElementById("all-input")
+let inputCheck = document.getElementsByClassName("input-check")
+let allCheckedProdcuts = []
 let sumPrice = 0;
 let cartNumbers = 0;
+let sumPrices = 0;
+badge.textContent = carts.length
+badge1.textContent = carts.length
 sumPrice.textContent = cartSum;
 cartNumbers.textContentc = cartNumbers;
 
-let sumPrices = 0;
 
 carts.forEach(el => {
     sumPrices += el.price * el.number;
@@ -16,14 +24,14 @@ carts.forEach(el => {
 
 
 discountInput.addEventListener("input", (e) => {
-    let inputValue = e.target.value.toLowerCase(); 
+    let inputValue = e.target.value.toLowerCase();
     let discountedPrice = 0;
 
     carts.forEach(el => {
         if (inputValue === "begzod") {
-            discountedPrice += (el.price * 0.8) * el.number; 
+            discountedPrice += (el.price * 0.8) * el.number;
         } else {
-            discountedPrice += el.price * el.number; 
+            discountedPrice += el.price * el.number;
         }
     });
 
@@ -34,22 +42,21 @@ function showCart(content, data) {
     content.innerHTML = ""
     data.map((el) => {
         content.innerHTML += `
-          <div
-                            class='py-[10px] sm:py-[20px] grid grid-cols-1 sm:flex items-center justify-between gap-[20px] md:gap-[30px] xl:gap-[60px]'>
+                          <div class='py-[10px] sm:py-[20px] grid grid-cols-1 sm:flex items-center justify-between gap-[20px] md:gap-[30px] xl:gap-[60px]'>
                             <div class='flex items-center gap-[15px] xl:gap-[20px]'>
-                                <input class='w-[20px] cursor-pointer h-[20px]' type="checkbox" name="" id="" />
+                                <input onClick="checkedInput(this, ${el.id})" class='input-check w-[20px] cursor-pointer h-[20px]' type="checkbox" name="" id="" />
                                 <img class="w-[60px] h-[60px]" src=${el.image[0]} alt="img" />
                                 <div class='flex flex-col gap-[5px]'>
-                                    <p>${el.name}</p>
-                                    <p class='w-full line-clamp-2 xl:line-clamp-0'>${el.description}</p>
-                                    <p class='text-[#55556D] whitespace-nowrap'>Артикул: ${el.article}</p>
+                                    <p class="font-bold">${el.name}</p>
+                                    <p class='w-full line-clamp-1 xl:line-clamp-0'>${el.description}</p>
+                                    <p class='text-[12px] sm:text-[16px] text-[#55556D] whitespace-nowrap'>Артикул: ${el.article}</p>
                                 </div>
                             </div>
                             <div class='flex mt-[-30px] items-center gap-[20px] md:gap-[30px] xl:gap-[55px]'>
                                 <p class='whitespace-nowrap'>5 дней</p>
                                 <div class='flex flex-col items-center gap-[5px] mt-[30px]'>
                                     <div
-                                        class='bg-[#F1F2F4] rounded-[58px] flex px-[5px] items-center justify-between w-[120px] h-[40px]'>
+                                        class='bg-[#F1F2F4] rounded-[58px] flex px-[2.5px] sm:px-[5px] items-center justify-between w-[120px] h-[40px]'>
                                         <button
                                         onClick="decraese(${el.id})"
                                             class='bg-[white] inline-block pl-[5px] cursor-pointer w-[30px] h-[30px] rounded-[24px]'>
@@ -84,6 +91,43 @@ function showCart(content, data) {
 }
 showCart(cartProducts, carts)
 
+function checkedInput(obj, id) {
+    let item = carts.find((el) => el.id === id)
+    if (obj.checked === true) {
+        allCheckedProdcuts.push(id)
+    } else {
+        allCheckedProdcuts = allCheckedProdcuts.filter((el) => el.id !== id)
+    }
+}
+
+allCheckedDalet.addEventListener("click", () => {
+    carts = carts.filter((el) => !allCheckedProdcuts.includes(el.id))
+    allCheckedProdcuts = []
+    badge.textContent = carts.length
+    badge1.textContent = carts.length
+    localStorage.setItem("carts", JSON.stringify(carts));
+    countPrice()
+    showCart(cartProducts, carts)
+})
+
+allInput.addEventListener("click", () => {
+    if (allCheckedProdcuts.length === carts.length) {
+        allCheckedProdcuts = []
+        for (let el of inputCheck) {
+            el.checked = false;
+        }
+    } else {
+        allCheckedProdcuts = []
+        for (let el of inputCheck) {
+            el.checked = true;
+        }
+        carts.map((el) => {
+            allCheckedProdcuts.push(el.id)
+        })
+    }
+})
+
+
 function increase(id) {
     carts = carts.map((el) => {
         if (el.id === id) {
@@ -92,6 +136,8 @@ function increase(id) {
         return el
     })
     countPrice()
+    badge.textContent = carts.length
+    badge1.textContent = carts.length
     localStorage.setItem("carts", JSON.stringify(carts));
     showCart(cartProducts, carts)
 
@@ -108,6 +154,8 @@ function decraese(id) {
         carts = carts.filter((el) => el.id !== id)
     }
     countPrice()
+    badge.textContent = carts.length
+    badge1.textContent = carts.length
     localStorage.setItem("carts", JSON.stringify(carts));
     showCart(cartProducts, carts)
 
@@ -124,4 +172,5 @@ function countPrice() {
     cartNumber.textContent = cartNumbers;
     showCart(cartProducts, carts)
 }
+
 countPrice()

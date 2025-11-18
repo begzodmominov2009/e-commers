@@ -6,24 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
     <header class="fixed shadow-lg shadow-blue-300/20 top-0 z-50 bg-white left-0 w-full">
         <div class="container mx-auto px-[15px] sm:px-[0px] 2xl:px-[127px] pt-[18px]">
             <div class="flex justify-between items-center gap-[20px] pb-[18px]">
                 <div class="flex items-center gap-[7px]">
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <img class='max-w-[170px] w-full sm:w-[370px]  h-[43.18px] sm:h-[50.77px]'
-                            src="./assets/header/logo.jpg" alt="" />
+                            src="../assets/header/logo.jpg" alt="" />
                     </a>
                 </div>
                 <div class="hidden sm:flex max-w-[730px] relative w-full">
@@ -37,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden md:flex flex items-center gap-[10px]  xl:gap-[30px]">
+                <div class="hidden md:flex flex items-center gap-[10px]  xl:gap-[35px]">
                     <div class="flex items-center gap-1 hidden sm:flex text-black whitespace-nowrap">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.5">
@@ -79,142 +71,41 @@
                         </svg>
                         <p class="hidden lg:flex">Санкт-Петербург</p>
                     </div>
-                    <a href="./Pages/register.html"
-                        class="flex items-center hidden cursor-pointer sm:flex text-black  gap-1 whitespace-nowrap">
-                        <img src="./assets/header/person_24dp_5946D7_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <a href="" class="flex items-center hidden sm:flex text-black  gap-1 whitespace-nowrap">
+                        <img src="../assets/header/person_24dp_5946D7_FILL0_wght400_GRAD0_opsz24.svg" alt="">
                         <p class="hidden xl:flex">Вход / Регистрация</p>
                     </a>
-                    <button class="relative">
-                        <a href="./Pages/cart.html"
-                            class='text-black cursor-pointer flex items-center justify-center gap-[5px]'>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                                fill="#5946D7">
-                                <path
-                                    d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
-                            </svg>
-                            <p>Корзина</p>
-                        </a>
-                        <span id=""
-                            class="badge absolute top-[-7px] text-[8px] left-5 bg-[#5946D7] text-[white] px-[2px] rounded-[10px]">0</span>
-                    </button>
+                    <a href="./cart.html" class='text-black flex items-center justify-center gap-[5px]'>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#5946D7">
+                            <path
+                                d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+                        </svg>
+                        <p>Корзина</p>
+                    </a>
                 </div>
                 <div class="flex md:hidden">
-                    <img class="w-[24px] h-[24px]" src="./assets/header/search2.svg" alt="">
+                    <img src="../assets/header/search2.svg" alt="">
                 </div>
             </div>
             <hr class="hidden sm:flex text-[#E3E3E8] border-[1px]" />
-            <div id="home-categories"
-                class=" pt-[20px] hidden sm:flex flex items-center justify-between gap-[10px] scrollbar  [&::-webkit-scrollbar]:w-2 overflow-x-auto w-full sm:flex pb-[20px]">
+            <div id="page-categories"
+                class="pt-[20px] hidden sm:flex flex items-center justify-between gap-[10px] overflow-x-auto w-full sm:flex pb-[20px]">
 
             </div>
         </div>
     </header>
 
+
     <main>
-        <!-- DiscountCard -->
         <section>
-            <div class="container mx-auto px-[15px] sm:px-[0px] 2xl:px-[127px] pt-[90px] sm:pt-[200px]">
-                <div
-                    class="flex items-center justify-between gap-[10px] overflow-x-auto w-full scrollbar  [&::-webkit-scrollbar]:w-2">
-                    <div
-                        class="min-w-[260px] cursor-pointer bg-gradient-to-b from-white to-blue-50 rounded-xl shadow border border-gray-200 p-4 flex gap-3 hover:shadow-lg transition">
-                        <img src="./assets/images/products/16_3.png" class="w-20 h-20 object-contain">
-                        <div>
-                            <h3 class="font-semibold text-[15px]">Cooking Pan Set</h3>
-                            <p class="text-gray-500 text-sm line-clamp-1.7">Non-stick pan set suitable for all types of
-                                stoves. <span
-                                    class="bg-[#5946D7] text-white p-[2px] inline-flex text-[12px] items-center jus rounded-[20px]">22%</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="min-w-[260px] cursor-pointer bg-[#f5f5f5] rounded-xl shadow border border-gray-200 p-4 flex gap-3 hover:shadow-lg transition">
-                        <img src="./assets/images/products/1_3.png" class="w-20 h-20 object-contain">
-                        <div>
-                            <h3 class="font-semibold text-[15px]">Coffee Maker</h3>
-                            <p class="text-gray-500 text-sm line-clamp-2.7">Non-stick pan set suitable for all types of
-                                stoves
-                                <span
-                                    class="bg-[#5946D7] text-white p-[2px] inline-flex text-[12px] items-center jus rounded-[20px]">15%</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="min-w-[260px] cursor-pointer bg-[#f5f5f5] rounded-xl shadow border border-gray-200 p-4 flex gap-3 hover:shadow-lg transition">
-                        <img src="./assets/images/products/18_3.png" class="w-20 h-20 object-contain">
-                        <div>
-                            <h3 class="font-semibold text-[15px]">Wireless Charger</h3>
-                            <p class="text-gray-500 text-sm line-clamp-1.7">Fast wireless charger compatible with all
-                                smartphones.<span
-                                    class="bg-[#5946D7] text-white p-[2px] inline-flex text-[12px] items-center jus rounded-[20px]">5%</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="min-w-[260px] cursor-pointer bg-[#f5f5f5] rounded-xl shadow border border-gray-200 p-4 flex gap-3 hover:shadow-lg transition">
-                        <img src="./assets/images/products/26_3.png" class="w-20 h-20 object-contain">
-                        <div>
-                            <h3 class="font-semibold text-[15px]">Sports Watch</h3>
-                            <p class="text-gray-500 text-sm line-clamp-1.7">Non-stick pan set suitable for all types of
-                                stoves <span
-                                    class="bg-[#5946D7] text-white p-[2px] inline-flex text-[12px] items-center jus rounded-[20px]">12%</span>
-                            </p>
-                        </div>
-                    </div>
+            <div
+                class="container mx-auto px-[15px] sm:px-[0px] 2xl:px-[127px] pt-[70px] sm:pt-[160px] pb-[40px] sm:pb-[80px]">
+                <div>
+                    <h1 class="text-[24px] sm:text-[32px] font-bold pt-[25px]" id="title">Сохранённые</h1>
                 </div>
-            </div>
-        </section>
-
-        <!-- Electronics -->
-        <section>
-            <div class="container mx-auto px-[15px] sm:px-[0px] 2xl:px-[127px] pt-[40px] md:pt-[60px]">
-                <div class="flex items-center justify-between pb-[15px] sm:pb-[25px]">
-                    <h1 class="text-[24px] sm:text-[36px] font-bold ">Electronics</h1>
-                    <div
-                        class="flex items-center justify-center gap-[7px] bg-[#F4F5F6] p-[7px] cursor-pointer rounded-[10px]">
-                        <a href="./Pages/all-prodcuts.html"
-                            class="text-[12px] sm:text-[14px] text-[#5946D7] font-bold">All prodcuts</a>
-                        <img src="./assets/home/right-Arrow.svg" alt="right-Arrow">
-                    </div>
-                </div>
-                <div id="discount-products" class="owl-carousel owl-theme relative">
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Fashion -->
-        <section>
-            <div class="container mx-auto px-[15px] sm:px-[0px] 2xl:px-[127px] pt-[40px] sm:pt-[80px]">
-                <div class="flex items-center justify-between pb-[15px] sm:pb-[25px]">
-                    <h1 class="text-[24px] sm:text-[36px] font-bold ">Fashion</h1>
-                    <div
-                        class="flex items-center justify-center gap-[7px] bg-[#F4F5F6] p-[7px] cursor-pointer rounded-[10px]">
-                        <a href="./Pages/all-prodcuts.html"
-                            class="text-[12px] sm:text-[14px] text-[#5946D7] font-bold">All
-                            prodcuts</a>
-                        <img src="./assets/home/right-Arrow.svg" alt="right-Arrow">
-                    </div>
-                </div>
-                <div id="fashion-products" class="owl-carousel owl-theme relative">
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Accessories -->
-        <section>
-            <div class="container mx-auto px-[15px] sm:px-[0px] 2xl:px-[127px] pt-[40px] sm:pt-[80px]">
-                <div class="flex items-center justify-between pb-[15px] sm:pb-[25px]">
-                    <h1 class="text-[24px] sm:text-[36px] font-bold ">Accessories</h1>
-                    <div
-                        class="flex items-center justify-center gap-[7px] bg-[#F4F5F6] p-[7px] cursor-pointer rounded-[10px]">
-                        <a href="./Pages/all-prodcuts.html"
-                            class="text-[12px] sm:text-[14px] text-[#5946D7] font-bold">All prodcuts</a>
-                        <img src="./assets/home/right-Arrow.svg" alt="right-Arrow">
-                    </div>
-                </div>
-                <div id="accessories-products" class="owl-carousel owl-theme relative">
+                <div id=""
+                    class="like-products grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[10px] sm:gap-[20px] pt-[15px] sm:pt-[30px]">
 
                 </div>
             </div>
@@ -222,74 +113,71 @@
     </main>
 
     <ul id="menus-2"
-        class="flex md:hidden bg-[white] flex fixed h-[10vw] w-[100vw] bottom-[0px] justify-between items-center flex py-[30px] px-[15px] sm:px-[50px] z-[20]">
+        class="flex sm:hidden bg-[white] flex fixed h-[10vw] w-[100vw] bottom-[0px] justify-between items-center flex py-[30px] px-[15px] z-[900]">
         <li>
-            <a href="" class="flex flex-col text-[14px] text-[#3D3D4B]
+            <a href="" class="flex flex-col text-[12px] text-[#3D3D4B]
             items-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M9.5 20.5002V16.0002C9.5 14.6192 10.619 13.5002 12 13.5002V13.5002C13.381 13.5002 14.5 14.6192 14.5 16.0002V20.5002H20V11.9143C20 11.3843 19.789 10.8752 19.414 10.5002L12.707 3.79325C12.316 3.40225 11.683 3.40225 11.293 3.79325L4.586 10.5002C4.211 10.8752 4 11.3843 4 11.9143V20.5002H9.5Z"
-                        stroke="#5946D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        stroke="#55556D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <p>Home</p>
+                <p>Главная</p>
             </a>
         </li>
         <li>
-            <a href="./Pages/catalog.html" class="flex flex-col text-[14px] text-[#3D3D4B] items-center">
+            <a class="flex flex-col text-[12px] text-[#3D3D4B] items-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.99622 3.9963H21.0037" stroke="#5946D7" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M2.99622 10.9992H7.9983" stroke="#5946D7" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M2.99622 18.0022H7.9983" stroke="#5946D7" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M2.99622 3.9963H21.0037" stroke="#55556D" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M2.99622 10.9992H7.9983" stroke="#55556D" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M2.99622 18.0022H7.9983" stroke="#55556D" stroke-width="1.5" stroke-linecap="round" />
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M15.7515 17.4772C18.0997 17.4772 20.0033 15.5736 20.0033 13.2254C20.0033 10.8772 18.0997 8.97363 15.7515 8.97363C13.4033 8.97363 11.4998 10.8772 11.4998 13.2254C11.4998 15.5736 13.4033 17.4772 15.7515 17.4772Z"
-                        stroke="#5946D7" stroke-width="1.5" />
-                    <path d="M18.5027 16.4766L21.0037 19.0029" stroke="#5946D7" stroke-width="1.5"
+                        stroke="#55556D" stroke-width="1.5" />
+                    <path d="M18.5027 16.4766L21.0037 19.0029" stroke="#55556D" stroke-width="1.5"
                         stroke-linecap="round" />
                 </svg>
-                <p>Catalog</p>
+                <p>Каталог</p>
             </a>
         </li>
         <li>
-            <a href="./Pages/like.html" class="flex flex-col text-[14px]
+            <a href="" class="flex flex-col text-[12px]
             text-[#3D3D4B] items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                    fill="#5946D7">
+                    fill="#55556D">
                     <path
                         d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
                 </svg>
-                <p>Product</p>
+                <p>Продукт</p>
             </a>
         </li>
         <li>
-            <button class="relative">
-                <a href="./Pages/cart.html" class='cursor-pointer flex items-center justify-center gap-[5px]'>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#5946D7">
-                        <path
-                            d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
-                    </svg>
-                </a>
-                <span id=""
-                    class="badge-1 absolute top-[-7px] text-[8px] right-[0px] bg-[#5946D7] text-[white] px-[2px] rounded-[10px]">0</span>
-                <p class="text-[14px] text-[#3D3D4B]">Cart</p>
-            </button>
+            <a href="" class="flex flex-col text-[12px] text-[#3D3D4B]
+            items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#55556D">
+                    <path
+                        d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+                </svg>
+                <p>Корзина</p>
+            </a>
         </li>
         <li>
-            <a href="" class="flex flex-col text-[14px] text-[#3D3D4B]
+            <a href="" class="flex flex-col text-[12px] text-[#3D3D4B]
             items-center">
                 <svg width="24" height="24" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M9 12.5C12.4706 12.5 14.4641 13.3527 15.5932 14.2164C16.8076 15.1453 17 16.775 17 18.3039C17 19.2406 16.2406 20 15.3039 20H2.69607C1.75936 20 1 19.2406 1 18.3039C1 16.775 1.19243 15.1453 2.40682 14.2164C3.53589 13.3527 5.52943 12.5 9 12.5Z"
-                        stroke="#5946D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        stroke="#55556D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     <circle cx="9" cy="5" r="4" stroke="#55556D" stroke-width="1.5" />
                 </svg>
-                <p>Profile</p>
+                <p>Профиль</p>
             </a>
         </li>
     </ul>
 
-    <footer class='bg-[#2F2B4A] mt-[40px] pb-[45px] sm:mt-[80px]'>
-        <div class="container mx-auto px-[15px] sm:px-[0px] 2xl:px-[127px] pt-[40px]">
+    <footer class='bg-[#2F2B4A] mt-[0px] pb-[45px] sm:mt-[80px]'>
+        <div class="container mx-auto px-[0px] 2xl:px-[127px] pt-[40px]">
             <div
                 class='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 flex-col gap-10 xl:grid-cols-5 text-[#c9ced3] pb-[40px]'>
                 <ul class='flex flex-col gap-[8px]'>
@@ -416,17 +304,13 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src=" ./Js/products-data.js"></script>
-    <script src="./Js/cetegory-data.js"></script>
-    <script src="./Js/cetegories.js"></script>
-    <script src="./Js/main.js"></script>
-    <script src="./Js/search.js"></script>
+    <script src="../Js/products-data.js"></script>
+    <script src="../Js/cetegory-data.js"></script>
+    <script src="../Js/PageCategory.js"></script>
+    <script src="../Js/like.js"></script>
+    <script src="../Js/search.js"></script>
+    <script src="../Js/main-2.js"></script>
+
 </body>
 
 </html>
