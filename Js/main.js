@@ -7,6 +7,7 @@ let filteredProductsThree = products.filter((el) => el.category === "Accessories
 let filteredProductsTwo = products.filter((el) => el.category === "Fashion")
 let sliceFashionProducts = filteredProductsTwo.slice(0, 8)
 let filteredProducts = products.filter((el) => el.category === "Electronics")
+let categoryHidden = document.querySelector(".category-hidden")
 let sliceProducts = filteredProducts.slice(0, 8);
 let carts = JSON.parse(localStorage.getItem("carts") || "[]")
 let likes = JSON.parse(localStorage.getItem("likes") || "[]")
@@ -140,7 +141,7 @@ function showProducts(content, data) {
                                 </div>
                                
                             ${carts.find((cart) => cart.id === el.id) ?
-                `<div class="flex items-center gap-[5px] w-[100px]">
+                           `<div class="flex items-center gap-[5px] w-[120px]">
                                 <button
                                 onClick="decraese(${el.id})"
                                     class="border-[2px] w-full group cursor-pointer group border-[#5946D7] p-[2.5px] sm:p-[5px]  rounded-[10px] bg-[#5946D7] hover:border-[#5946D7] duration-200 inline-flex items-center justify-center">
@@ -166,9 +167,9 @@ function showProducts(content, data) {
                                             d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
                                     </svg>
                                 </button>`
-            }
-            ${likes.find((like) => like.id === el.id) ? `
-                 <div onClick="removeToLikes(${el.id})" class="absolute top-1 sm:top-1.5 right-1 sm:right-1.5 bg-[#5946D7] p-0.5 sm:p-1 rounded-lg">
+                                }
+                                ${likes.find((like) => like.id === el.id) ? `
+                             <div onClick="removeToLikes(${el.id})" class="absolute top-1 sm:top-1.5 right-1 sm:right-1.5 bg-[#5946D7] p-0.5 sm:p-1 rounded-lg">
                             <img class="" src="../assets/cart/remove-likes.svg" alt="star" />
                             </div>
                  
@@ -271,6 +272,16 @@ function initCarousel() {
     });
 }
 initCarousel()
+window.addEventListener("scroll", () => {
+    if (scrollY > 80) {
+        categoryHidden.classList.add("hidden", "duration-200");
+    } else{
+        categoryHidden.classList.remove("hidden", "duration-200");
+    }
+});
+
+
+
 
 
 

@@ -10,7 +10,7 @@ let likes = JSON.parse(localStorage.getItem("likes") || "[]")
 let title = document.getElementById("title")
 title.textContent = categoryName
 
-function showCategories(content, data) {
+function showCategoriesCards(content, data) {
     content.innerHTML = ""
     data.map((el) => {
         content.innerHTML += `
@@ -172,14 +172,14 @@ function showCategories(content, data) {
     })
    
 }
-showCategories(categoryProdcuts, filteredCards)
+showCategoriesCards(categoryProdcuts, filteredCards)
 
-function addToCart(id,) {
+function addToCart(id) {
     let item = products.find((el) => el.id === id);
     item.number = 1;
     carts.push(item)
     localStorage.setItem("carts", JSON.stringify(carts))
-    showCategories(categoryProdcuts, filteredCards)
+    showCategoriesCards(categoryProdcuts, filteredCards)
 }
 function increase(id) {
     carts = carts.map((el) => {
@@ -190,7 +190,7 @@ function increase(id) {
     })
 
     localStorage.setItem("carts", JSON.stringify(carts));
-    showCategories(categoryProdcuts, filteredCards)
+    showCategoriesCards(categoryProdcuts, filteredCards)
 }
 function decraese(id) {
     let item = carts.find((el) => el.id === id)
@@ -204,18 +204,18 @@ function decraese(id) {
         carts = carts.filter((el) => el.id !== id)
     }
     localStorage.setItem("carts", JSON.stringify(carts));
-    showCategories(categoryProdcuts, filteredCards)
+    showCategoriesCards(categoryProdcuts, filteredCards)
 }
 function addToLikes(id) {
     let item = products.find((el) => el.id === id)
     likes.push(item)
     localStorage.setItem("likes", JSON.stringify(likes))
-    showCategories(categoryProdcuts, filteredCards)
+    showCategoriesCards(categoryProdcuts, filteredCards)
 }
 
 function removeToLikes(id) {
     likes = likes.filter((el) => el.id !== id)
     localStorage.setItem("likes", JSON.stringify(likes))
-    showCategories(categoryProdcuts, filteredCards)
+    showCategoriesCards(categoryProdcuts, filteredCards)
 
 }
