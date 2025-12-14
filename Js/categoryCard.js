@@ -212,7 +212,6 @@ function addToLikes(id) {
     localStorage.setItem("likes", JSON.stringify(likes))
     showCategoriesCards(categoryProdcuts, filteredCards)
 }
-
 function removeToLikes(id) {
     likes = likes.filter((el) => el.id !== id)
     localStorage.setItem("likes", JSON.stringify(likes))
