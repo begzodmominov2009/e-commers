@@ -16,6 +16,16 @@ localStorage.setItem("likes", JSON.stringify(likes))
 badge.textContent = carts.length
 badge1.textContent = carts.length
 
+const loader = document.getElementById("loader")
+
+function showLoader() {
+    loader.classList.remove("hidden")
+}
+function hideLoader() {
+    loader.classList.add("hidden")
+}
+
+
 function destroyCarousel() {
     let current = $(".owl-carousel").owlCarousel().data('owl.carousel').relative();
     localStorage.setItem("carouselPos", current);
@@ -279,6 +289,19 @@ window.addEventListener("scroll", () => {
         categoryHidden.classList.remove("hidden", "duration-200");
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    showLoader()
+
+    setTimeout(() => {
+        showProducts(discountProducts, sliceProducts)
+        showProducts(fashionProducts, sliceFashionProducts)
+        showProducts(accessoriesProducts, filteredProductsThree)
+
+        hideLoader()
+    }, 1000) // fake loading
+})
+
 
 
 
